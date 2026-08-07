@@ -69,6 +69,8 @@ const screenshots = [
   { src: "/images/screenshots/mockup-detail.png", alt: "Detail d'une annonce" },
   { src: "/images/screenshots/mockup-chat.png", alt: "Messagerie integree" },
   { src: "/images/screenshots/mockup-dashboard.png", alt: "Dashboard prestataire" },
+  { src: "/images/screenshots/mockup-stats.png", alt: "Statistiques" },
+  { src: "/images/screenshots/mockup-pubs.png", alt: "Gestion des publicites" },
 ];
 
 export default function Home() {
