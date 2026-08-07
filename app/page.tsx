@@ -260,18 +260,18 @@ export default function Home() {
               Un apercu des ecrans principaux de Horem+.
             </p>
           </div>
-          <div className="screenshots-scroll pb-6 -mx-4 px-4 sm:mx-0 sm:px-0">
-            <div className="inline-flex gap-5 sm:gap-8 sm:flex sm:justify-center sm:flex-wrap">
+          <div className="screenshots-scroll pb-6 -mx-4 px-4 sm:-mx-6 sm:px-6 lg:mx-0 lg:px-0">
+            <div className="inline-flex gap-5 sm:gap-6">
               {screenshots.map((s) => (
                 <div
                   key={s.alt}
-                  className="flex-shrink-0 flex flex-col items-center gap-3 w-[180px] sm:w-auto"
+                  className="flex-shrink-0 flex flex-col items-center gap-3 w-[180px] sm:w-[200px]"
                 >
                   {/* eslint-disable-next-line @next/next/no-img-element */}
                   <img
                     src={s.src}
                     alt={s.alt}
-                    className="w-[180px] sm:w-auto h-[340px] sm:h-[480px] object-contain drop-shadow-xl"
+                    className="w-[180px] sm:w-[200px] h-[340px] sm:h-[420px] object-contain drop-shadow-xl"
                   />
                   <p className="text-sm font-medium text-text-secondary text-center">
                     {s.alt}
