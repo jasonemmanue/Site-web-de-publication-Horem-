@@ -64,11 +64,11 @@ const stats = [
 ];
 
 const screenshots = [
-  { src: "/images/screenshots/accueil.png", alt: "Ecran d'accueil Horem+" },
-  { src: "/images/screenshots/carte.png", alt: "Carte interactive" },
-  { src: "/images/screenshots/detail.png", alt: "Detail d'une annonce" },
-  { src: "/images/screenshots/chat.png", alt: "Messagerie integree" },
-  { src: "/images/screenshots/dashboard.png", alt: "Dashboard prestataire" },
+  { src: "/images/mockup-hero.png", alt: "Ecran d'accueil Horem+" },
+  { src: "/images/screenshots/mockup-carte.png", alt: "Carte interactive" },
+  { src: "/images/screenshots/mockup-detail.png", alt: "Detail d'une annonce" },
+  { src: "/images/screenshots/mockup-chat.png", alt: "Messagerie integree" },
+  { src: "/images/screenshots/mockup-dashboard.png", alt: "Dashboard prestataire" },
 ];
 
 export default function Home() {
@@ -258,43 +258,24 @@ export default function Home() {
               Un apercu des ecrans principaux de Horem+.
             </p>
           </div>
-          <div className="flex gap-6 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
+          <div className="flex gap-8 overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide justify-center">
             {screenshots.map((s) => (
               <div
                 key={s.alt}
-                className="flex-shrink-0 snap-center"
+                className="flex-shrink-0 snap-center flex flex-col items-center gap-3"
               >
-                <div className="w-60 h-[480px] bg-white rounded-[2rem] shadow-lg border border-border overflow-hidden flex items-center justify-center">
-                  <div className="text-center px-6">
-                    <div className="w-16 h-16 bg-primary-light rounded-2xl flex items-center justify-center mx-auto mb-3">
-                      <svg
-                        className="w-8 h-8 text-primary"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
-                      >
-                        <path
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                          strokeWidth={1.5}
-                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
-                        />
-                      </svg>
-                    </div>
-                    <p className="text-sm font-medium text-text-secondary">
-                      {s.alt}
-                    </p>
-                    <p className="text-xs text-text-hint mt-1">
-                      Capture a venir
-                    </p>
-                  </div>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src={s.src}
+                  alt={s.alt}
+                  className="h-[480px] w-auto drop-shadow-xl"
+                />
+                <p className="text-sm font-medium text-text-secondary">
+                  {s.alt}
+                </p>
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-text-hint mt-6">
-            Les captures d&apos;ecran reelles seront ajoutees prochainement.
-          </p>
         </div>
       </section>
 
