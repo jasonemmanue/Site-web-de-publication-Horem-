@@ -139,42 +139,15 @@ export default function Home() {
             </div>
             <div className="flex justify-center">
               <div className="relative">
-                <div className="w-64 h-[520px] bg-white/10 backdrop-blur rounded-[2.5rem] border-2 border-white/20 shadow-2xl flex items-center justify-center">
-                  <div className="text-center px-6">
-                    <Image
-                      src="/images/logo.png"
-                      alt="Horem+"
-                      width={80}
-                      height={80}
-                      className="mx-auto mb-4 rounded-2xl"
-                    />
-                    <p className="text-white text-xl font-bold">Horem+</p>
-                    <p className="text-blue-200 text-sm mt-1">
-                      Immobilier &amp; Services
-                    </p>
-                  </div>
-                </div>
-                <div className="absolute -bottom-4 -right-4 w-20 h-20 bg-accent rounded-2xl shadow-lg flex items-center justify-center rotate-12">
-                  <svg
-                    className="w-10 h-10 text-primary-dark"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke="currentColor"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                    />
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                </div>
+                {/* eslint-disable-next-line @next/next/no-img-element */}
+                <img
+                  src="/images/mockup-hero.png"
+                  alt="Application Horem+ - Splash screen"
+                  width={300}
+                  height={620}
+                  className="drop-shadow-2xl rounded-[2rem]"
+                  style={{ maxHeight: 620 }}
+                />
               </div>
             </div>
           </div>
