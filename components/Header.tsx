@@ -3,9 +3,25 @@
 import Link from "next/link";
 import Image from "next/image";
 import { useState } from "react";
+import { usePathname } from "next/navigation";
 
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
+  const pathname = usePathname();
+
+  const navLinks = [
+    { href: "/#fonctionnalites", label: "Fonctionnalites", match: "/#fonctionnalites" },
+    { href: "/#comment-ca-marche", label: "Comment ca marche", match: "/#comment-ca-marche" },
+    { href: "/#screenshots", label: "Captures", match: "/#screenshots" },
+    { href: "/confidentialite", label: "Confidentialite", match: "/confidentialite" },
+    { href: "/conditions", label: "CGU", match: "/conditions" },
+    { href: "/support", label: "Support", match: "/support" },
+  ];
+
+  const isActive = (match: string) => {
+    if (match.startsWith("/#")) return pathname === "/";
+    return pathname === match;
+  };
 
   return (
     <header className="sticky top-0 z-50 bg-white/95 backdrop-blur border-b border-border">
@@ -25,46 +41,20 @@ export default function Header() {
           </Link>
 
           <nav className="hidden md:flex items-center gap-8">
-            <Link
-              href="/#fonctionnalites"
-              className="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
-            >
-              Fonctionnalites
-            </Link>
-            <Link
-              href="/#comment-ca-marche"
-              className="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
-            >
-              Comment ca marche
-            </Link>
-            <Link
-              href="/#screenshots"
-              className="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
-            >
-              Captures
-            </Link>
-            <Link
-              href="/confidentialite"
-              className="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
-            >
-              Confidentialite
-            </Link>
-            <Link
-              href="/conditions"
-              className="text-sm font-medium text-text-secondary hover:text-primary transition-colors"
-            >
-              CGU
-            </Link>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`text-sm font-medium transition-colors ${
+                  isActive(link.match)
+                    ? "text-primary border-b-2 border-primary pb-0.5"
+                    : "text-text-secondary hover:text-primary"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
           </nav>
-
-          <div className="hidden md:flex items-center gap-3">
-            <a
-              href="#telecharger"
-              className="px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full hover:bg-primary-dark transition-colors"
-            >
-              Telecharger
-            </a>
-          </div>
 
           <button
             className="md:hidden p-2"
@@ -98,48 +88,20 @@ export default function Header() {
 
         {menuOpen && (
           <div className="md:hidden pb-4 border-t border-border mt-2 pt-4 space-y-3">
-            <Link
-              href="/#fonctionnalites"
-              className="block text-sm font-medium text-text-secondary hover:text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              Fonctionnalites
-            </Link>
-            <Link
-              href="/#comment-ca-marche"
-              className="block text-sm font-medium text-text-secondary hover:text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              Comment ca marche
-            </Link>
-            <Link
-              href="/#screenshots"
-              className="block text-sm font-medium text-text-secondary hover:text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              Captures
-            </Link>
-            <Link
-              href="/confidentialite"
-              className="block text-sm font-medium text-text-secondary hover:text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              Confidentialite
-            </Link>
-            <Link
-              href="/conditions"
-              className="block text-sm font-medium text-text-secondary hover:text-primary"
-              onClick={() => setMenuOpen(false)}
-            >
-              CGU
-            </Link>
-            <a
-              href="#telecharger"
-              className="inline-block mt-2 px-5 py-2.5 bg-primary text-white text-sm font-semibold rounded-full"
-              onClick={() => setMenuOpen(false)}
-            >
-              Telecharger
-            </a>
+            {navLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`block text-sm font-medium ${
+                  isActive(link.match)
+                    ? "text-primary font-semibold"
+                    : "text-text-secondary hover:text-primary"
+                }`}
+                onClick={() => setMenuOpen(false)}
+              >
+                {link.label}
+              </Link>
+            ))}
           </div>
         )}
       </div>

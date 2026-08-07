@@ -24,6 +24,10 @@ export const metadata: Metadata = {
     "annonces",
     "Mobile Money",
   ],
+  icons: {
+    icon: "/images/logo.png",
+    apple: "/images/logo.png",
+  },
   openGraph: {
     title: "Horem+ | Petites annonces immobilieres au Cameroun",
     description:

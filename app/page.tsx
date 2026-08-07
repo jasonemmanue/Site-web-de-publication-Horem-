@@ -37,7 +37,7 @@ const steps = [
   {
     num: "01",
     title: "Telechargez l'app",
-    desc: "Disponible gratuitement sur Android (Play Store) et bientot sur iOS (App Store).",
+    desc: "Disponible gratuitement sur Android (Play Store) et sur iOS (App Store).",
   },
   {
     num: "02",
@@ -85,7 +85,7 @@ export default function Home() {
             <div>
               <div className="inline-flex items-center gap-2 px-4 py-1.5 bg-white/15 backdrop-blur rounded-full text-sm text-white mb-6">
                 <span className="w-2 h-2 bg-accent rounded-full animate-pulse" />
-                Disponible sur Android &bull; iOS bientot
+                Disponible sur Play Store &amp; App Store
               </div>
               <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-white leading-tight">
                 Trouvez votre{" "}
@@ -96,10 +96,7 @@ export default function Home() {
                 services au Cameroun. Chambres, studios, appartements, villas,
                 restaurants, ecoles et pharmacies — tout en une seule app.
               </p>
-              <div
-                className="flex flex-wrap gap-4 mt-8"
-                id="telecharger"
-              >
+              <div className="flex flex-wrap gap-4 mt-8">
                 <a
                   href="#"
                   className="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-primary-dark font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
@@ -122,7 +119,7 @@ export default function Home() {
                 </a>
                 <a
                   href="#"
-                  className="inline-flex items-center gap-3 px-6 py-3.5 bg-white/15 backdrop-blur text-white font-semibold rounded-xl hover:bg-white/25 transition-colors border border-white/30"
+                  className="inline-flex items-center gap-3 px-6 py-3.5 bg-white text-primary-dark font-semibold rounded-xl hover:bg-blue-50 transition-colors shadow-lg"
                 >
                   <svg
                     className="w-7 h-7"
@@ -133,7 +130,7 @@ export default function Home() {
                   </svg>
                   <div className="text-left">
                     <div className="text-[10px] uppercase tracking-wider opacity-70">
-                      Bientot sur
+                      Disponible sur
                     </div>
                     <div className="text-base font-bold -mt-0.5">App Store</div>
                   </div>
@@ -405,7 +402,7 @@ export default function Home() {
             </a>
             <a
               href="#"
-              className="inline-flex items-center gap-3 px-8 py-4 bg-white/15 backdrop-blur text-white font-bold rounded-xl hover:bg-white/25 transition-colors border border-white/30 text-lg"
+              className="inline-flex items-center gap-3 px-8 py-4 bg-white text-primary-dark font-bold rounded-xl hover:bg-blue-50 transition-colors shadow-lg text-lg"
             >
               <svg
                 className="w-8 h-8"
