@@ -88,7 +88,7 @@ export default function ConfidentialitePage() {
             <ul className="list-disc pl-6 text-text-secondary space-y-2">
               <li>
                 Creer et gerer votre compte utilisateur via
-                l&apos;authentification par SMS (OTP).
+                l&apos;authentification par email et mot de passe.
               </li>
               <li>
                 Publier et afficher les annonces immobilieres et de services.

@@ -47,8 +47,9 @@ export default function ConditionsPage() {
             </h2>
             <ul className="list-disc pl-6 text-text-secondary space-y-2">
               <li>
-                L&apos;inscription se fait via verification par SMS (OTP) de
-                votre numero de telephone camerounais.
+                L&apos;inscription se fait par email et mot de passe, avec
+                verification de votre adresse email. Un numero de telephone
+                camerounais est demande comme moyen de contact.
               </li>
               <li>
                 Vous devez etre age d&apos;au moins 18 ans pour utiliser
